@@ -6,7 +6,7 @@
 /*   By: ddyankov <ddyankov@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/15 11:43:37 by ddyankov          #+#    #+#             */
-/*   Updated: 2023/09/15 12:14:12 by ddyankov         ###   ########.fr       */
+/*   Updated: 2023/09/17 16:10:34 by ddyankov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 Dog::Dog()
 {
     _type = "Dog";
+    _dogBrain = new Brain();
     std::cout << GREEN << "Dog Default constructor called" << RESET << std::endl;
 }
 
@@ -32,7 +33,10 @@ Dog&    Dog::operator=(const Dog& instance)
 }
 
 Dog::~Dog()
-{ std::cout << RED << "Dog Destructor called" << RESET << std::endl; }
+{
+    delete _dogBrain;
+    std::cout << RED << "Dog Destructor called" << RESET << std::endl;
+}
 
 void    Dog::makeSound() const
 {

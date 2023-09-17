@@ -6,7 +6,7 @@
 /*   By: ddyankov <ddyankov@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/15 12:06:22 by ddyankov          #+#    #+#             */
-/*   Updated: 2023/09/15 12:14:08 by ddyankov         ###   ########.fr       */
+/*   Updated: 2023/09/17 16:10:23 by ddyankov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 Cat::Cat()
 {
     _type = "Cat";
+    _catBrain = new Brain();
     std::cout << GREEN << "Cat Default constructor called" << RESET << std::endl;
 }
 
@@ -32,7 +33,10 @@ Cat&    Cat::operator=(const Cat& instance)
 }
 
 Cat::~Cat()
-{ std::cout << RED << "Cat Destructor called" << RESET << std::endl; }
+{
+    delete _catBrain; 
+    std::cout << RED << "Cat Destructor called" << RESET << std::endl;
+}
 
 void    Cat::makeSound() const
 {

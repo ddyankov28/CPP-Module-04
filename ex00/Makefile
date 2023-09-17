@@ -6,7 +6,7 @@
 #    By: ddyankov <ddyankov@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/09/14 16:06:12 by ddyankov          #+#    #+#              #
-#    Updated: 2023/09/15 15:55:03 by ddyankov         ###   ########.fr        #
+#    Updated: 2023/09/17 16:28:52 by ddyankov         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -22,7 +22,7 @@ OBJ = $(patsubst %.cpp, obj/%.o, $(SRC))
 
 DEPS = $(patsubst %.cpp, obj/%.d, $(SRC))
 
-CPPFLAGS = -Wall -Werror -Wextra -std=c++98 -MMD -MP -g 
+CPPFLAGS = -Wall -Werror -Wextra -std=c++98 -MMD -MP 
 # -MMD generates the dependency information
 # -MP adds empty rules for header files to prevent errors if a header is deleted.
 

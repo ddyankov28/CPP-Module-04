@@ -6,7 +6,7 @@
 /*   By: ddyankov <ddyankov@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/15 11:37:25 by ddyankov          #+#    #+#             */
-/*   Updated: 2023/09/15 17:05:06 by ddyankov         ###   ########.fr       */
+/*   Updated: 2023/09/17 16:06:16 by ddyankov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@
 class Dog : public Animal
 {
     private:
-        Brain* dogBrain;
+        Brain*  _dogBrain;
     public:
         Dog();                               // default constructor
         Dog(const Dog& instance);            // copy constructor
